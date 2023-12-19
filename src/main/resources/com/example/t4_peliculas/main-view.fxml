@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.t4_peliculas.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="ACCIONES">
+            <items>
+              <MenuItem fx:id="menuDetalles" mnemonicParsing="false" text="DETALLES" />
+                  <MenuItem fx:id="menuSimilares" mnemonicParsing="false" text="SIMILARES" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="tablaPeliculas" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="columnaTitulo" prefWidth="75.0" text="TITULO" />
+            <TableColumn fx:id="columnaPopularidad" prefWidth="75.0" text="POPULARIDAD" />
+            <TableColumn fx:id="columnaMedia" prefWidth="75.0" text="MEDIA" />
+            <TableColumn fx:id="columnaFecha" prefWidth="75.0" text="FECHA" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="39.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="comboGeneros" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="200.0" />
+               </HBox.margin>
+            </ComboBox>
+            <CheckBox fx:id="checkAdulto" mnemonicParsing="false" text="ADULT">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </CheckBox>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
